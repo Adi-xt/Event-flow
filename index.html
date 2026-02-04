@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1>Event flow playground</h1>
+        <p>Demonstrating Capturing Bubbling and Propogation control</p>
+    </header>
+    <main>
+    <div class="grparent">
+        <p>Grand Parent</p>
+        <div class="parent">
+            <span>Parent</span><button id="btn">click me </button>
+        </div>
+    </div>
+    <div class="eventlogs">
+        <h3>Event log</h3>
+        <ul class="addition"></ul>
+        <ul class="history" style="list-style: none;">
+            <li>Capturing->tatget->bubbling</li>
+            <li>stopPropogation blocks parent</li>
+            <li>stopImmediatePropogation blocks sibling handlers</li>
+        </ul>
+    </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
